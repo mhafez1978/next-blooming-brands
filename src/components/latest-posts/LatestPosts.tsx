@@ -50,7 +50,7 @@ const Blog = () => {
 
 export default Blog;
 
-const BlogCard = ({ image, date, CardTitle, CardDescription }) => {
+const BlogCard = ({ image, date, CardTitle, CardDescription }: any) => {
   return (
     <>
       <div className="w-full px-4 md:w-1/2 lg:w-1/3">

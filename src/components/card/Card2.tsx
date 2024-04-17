@@ -1,6 +1,6 @@
 import React from "react";
 
-const Card2 = (props) => {
+const Card2 = (props: any) => {
   return (
     <div className="nav-card w-full h-40 bg-base-100 shadow-xl text-center">
       <div className="nav-link">

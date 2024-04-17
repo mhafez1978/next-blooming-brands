@@ -1,6 +1,6 @@
 import React from "react";
 //import Card from "../card/Card";
-import Card2 from "../card/Card2";
+//import Card2 from "../card/Card2";
 
 const Drawer = () => {
   return (
