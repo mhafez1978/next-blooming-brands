@@ -5,7 +5,7 @@ const Services3 = () => {
     <>
       <section className="w-[100vw] min-h-[100vh] bg-gray-900 text-center py-20 px-8 xl:px-0 flex flex-col justify-center">
         <span className="text-gray-400 text-lg max-w-lg mx-auto mb-2 capitalize flex items-center">
-          what we're offering{" "}
+          what we&apos;re offering{" "}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
