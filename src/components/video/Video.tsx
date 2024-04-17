@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 
 const styles = {
   fullscreenVideo: {
@@ -71,6 +72,7 @@ const slideTitles = [
 
 const Video = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const router = useRouter();
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -80,31 +82,28 @@ const Video = () => {
   }, []);
 
   return (
-    <div className="relative w-[100vw] h-[80vh] font-sans overflow-hidden">
+    <div className="relative w-[100vw] h-[80vh] font-sans overflow-hidden top-0">
       <video
-        className="absolute z-0 w-full h-[80vh] object-cover brightness-60"
+        className="absolute z-0 w-[100vw] h-[80vh] object-cover brightness-60"
         loop
         autoPlay
         muted
         playsInline
         preload="auto"
-        poster="https://bosscreative.com/wp-content/themes/parada/videos/home/boss_home_video.jpg"
+        poster="/images/services-bg.png"
       >
-        <source
-          src="https://bosscreative.com/wp-content/themes/parada/videos/home/boss_home_video_1.mp4"
-          type="video/mp4"
-        />
+        <source src="/images/bg-video.mp4" type="video/mp4" />
       </video>
       <div className="absolute z-10 w-full h-[80vh] object-cover bg-black/60 backdrop-blur-sm"></div>
-      <div className="relative flex flex-col justify-center items-center h-full w-full z-10">
-        <div className="videoTextOverlay text-white text-center px-4 lg:px-8">
+      <div className="relative flex flex-col justify-center items-center h-full w-[100vw] z-10 sm:px-4">
+        <div className="videoTextOverlay text-white md:text-center lg:text-center sm:text-left lg:px-8">
           <p className="text-4xl md:text-6xl lg:text-7xl font-bold mb-2.5">
-            We&apos;re <span className="text-amber-500">Experts</span> in :
+            <span className="text-white">We&apos;re </span>Experts in :
           </p>
-          <p className="text-amber-500 mt-4 mb-4 text-2xl md:text-4xl lg:text-4xl">
+          <p className="text-sky-400 font-semibold mt-4 mb-4 text-2xl md:text-4xl lg:text-4xl">
             {slideTitles[currentSlide]}
           </p>
-          <div className="px-[20%] max-w-4xl font-light sm:text-sm md:text-base lg:text-lg lg:px-[12%]  ">
+          <div className="px-[4%] max-w-4xl font-light sm:mb-8 sm:text-sm md:text-base lg:text-lg lg:px-[12%] sm:px-0 ">
             We build modern, blazing fast, scalable, e-commerce stores, data
             driven websites that rank higher on search engines, and generate
             more leads for your business.
@@ -113,11 +112,19 @@ const Video = () => {
             {/* <Emblem text="Mohamed*Nabil*Hafez*" /> */}
           </div>
         </div>
-        <div className="w-[33vw] mx-auto grid sm:grid-rows-1 sm:gap-2 lg:grid-cols-2 lg:gap-2 lg:mt-5">
-          <button className="border-solid border-2 border-white rounded-sm w-full pt-3 pl-4 pr-6 pb-3 text-white hover:bg-amber-500/70 hover:text-white">
-            Get Started
+        <div className="w-[90vw] mx-auto flex flex-col text-left md:justify-center md:flex md:flex-row gap-2">
+          <button
+            onClick={() => router.push("/client-intake")}
+            className="font-black w-[300px] border-solid border-2 border-sky-600 rounded-md pt-3 pl-4 pr-6 pb-3 bg-gradient-to-r from-sky-200 to-sky-300 hover:text-white"
+          >
+            <span className="flex flex-row justify-center items-center">
+              Get Started{" "}
+            </span>
           </button>
-          <button className="border-solid border-2 border-white rounded-sm w-full pt-3 pl-4 pr-6 pb-3 text-white hover:bg-amber-500/70 hover:text-white">
+          <button
+            onClick={() => router.push("/services")}
+            className="font-black w-[300px] border-solid border-2 border-sky-600 rounded-md pt-3 pl-4 pr-6 pb-3 text-white hover:bg-gradient-to-r from-sky-200 to-sky-300 hover:text-black"
+          >
             Our Services
           </button>
         </div>

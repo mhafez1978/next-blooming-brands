@@ -5,7 +5,17 @@ import Call2Action from "@/components/call-2-action/Call2Action";
 import Test from "@/components/test/Test";
 import Test2 from "@/components/test/Test2";
 import ServiceSummary from "@/components/service/ServiceSummary";
+import Call2Action2 from "@/components/call-2-action/Call2Action2";
+import Reviews from "@/components/testimonials/Reviews";
+import LatestPosts from "@/components/latest-posts/LatestPosts";
 import Footer from "@/components/footer/Footer";
+import Contact from "@/components/contact/Contact";
+import OurServices from "@/components/service/OurServices";
+import PricingTable from "@/components/pricing-table/PricingTable";
+import Call2Action3 from "@/components/call-2-action/Call2Action3";
+import Services3 from "@/components/service/Services3";
+import FramedPerson from "@/components/misc/FramedPerson";
+import OurTeam from "@/components/our-team/OurTeam";
 
 // const services = [
 //   {
@@ -58,12 +68,22 @@ const Home = () => {
       <Header />
       <Video />
       <SocialProof />
-      <Call2Action />
+      <Call2Action2 />
       <Test />
       <Test2 />
-      {/* bg-gradient-to-r from-slate-950 from-10% via-slate-800 via-90%
-      to-slate-950 */}
-      <ServiceSummary />
+      {/* <ServiceSummary /> */}
+      {/* <OurServices /> */}
+      <Reviews />
+      {/* <LatestPosts /> */}
+
+      <PricingTable />
+      {/* <Call2Action3 />
+      <Services3 /> */}
+
+      {/* <FramedPerson /> */}
+
+      {/* <OurTeam /> */}
+      <Contact />
       <Footer />
     </>
   );

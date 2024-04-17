@@ -1,0 +1,137 @@
+.test {
+  overflow-x: hidden;
+  position: relative;
+}
+.left-light {
+  position: absolute;
+  left: 0;
+  top: -300px;
+  width: 310px;
+  height: 310px;
+  background-image: linear-gradient(
+    180deg,
+    rgba(84, 84, 212, 0.27) 0%,
+    rgba(84, 84, 212, 0.11) 100%
+  );
+  transform: rotate(-54deg);
+  border-radius: 155px;
+  filter: blur(99.5px);
+  z-index: -1;
+}
+
+.right-light {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 310px;
+  height: 310px;
+  background-image: linear-gradient(
+    180deg,
+    rgba(251, 168, 28, 0.11) 0%,
+    rgba(224, 86, 136, 0.06) 100%
+  );
+  transform: rotate(65.5deg);
+  border-radius: 155px;
+  filter: blur(99.5px);
+  z-index: -1;
+}
+
+.guy-image-container {
+  width: 310px;
+  height: 310px;
+  margin: 0 auto;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+}
+
+.guy-image-container .shape {
+  position: absolute;
+  object-fit: contain;
+}
+
+.guy-image-container .vector {
+  width: 63px;
+  height: 18px;
+  left: -80px;
+  top: 40px;
+}
+
+.guy-image-container .circles {
+  width: 34px;
+  height: 40px;
+  right: -100px;
+  top: 40px;
+}
+
+.guy-image-container .triangle {
+  width: 69px;
+  height: 80px;
+  left: -80px;
+  bottom: -180px;
+}
+
+.guy-image-container .plus-sign {
+  width: 33px;
+  height: 33px;
+  right: -100px;
+  bottom: 200px;
+  top: 430px;
+}
+
+.guy-image-container .background-square-frame {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  border-radius: 15px;
+  border: solid 2px var(--white);
+  transform: rotate(23.5deg);
+  margin-top: 80px;
+  top: 124px;
+  left: 92px;
+}
+
+.guy-image-container::before {
+  content: "";
+  position: absolute;
+  transform: rotate(23.5deg);
+  width: 245px;
+  height: 245.5px;
+  border-radius: 15px;
+  border: solid 3px transparent;
+  border-color: transparent var(--white) var(--white) transparent;
+  margin-top: 100px;
+  top: 63.3px;
+  left: 69px;
+  z-index: 1;
+}
+
+.invisible-holder {
+  transform: rotate(23.5deg);
+  overflow: hidden;
+  width: 350px;
+  height: 397px;
+}
+
+.invisible-holder .square-frame {
+  width: 250px;
+  height: 300px;
+  border-radius: 15px;
+  background-image: linear-gradient(to bottom, #5454d4, #5e5ee7);
+  border: solid 3px var(--white);
+  margin-top: 180px;
+  position: relative;
+  left: 130px;
+}
+
+.invisible-holder .square-frame img {
+  transform: rotate(-23.5deg);
+  width: 350px;
+  height: 433px;
+  object-fit: contain;
+  position: relative;
+  top: -88px;
+  left: -10px;
+}

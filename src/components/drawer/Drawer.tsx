@@ -1,4 +1,6 @@
 import React from "react";
+//import Card from "../card/Card";
+import Card2 from "../card/Card2";
 
 const Drawer = () => {
   return (
@@ -8,8 +10,8 @@ const Drawer = () => {
         {/* Page content here */}
         <label htmlFor="my-drawer">
           <svg
-            width="45px"
-            height="45px"
+            width="40px"
+            height="40px"
             viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"
             fill="white"
@@ -37,35 +39,13 @@ const Drawer = () => {
           aria-label="close sidebar"
           className="drawer-overlay"
         ></label>
-        <div className="menu w-[100vw] min-h-full grid grid-cols-2 bg-base-200">
-          {/* Sidebar content here */}
-
-          <ul className="menu w-[100vw] min-h-full justify-center items-center text-base-content">
-            <li>
-              <a className="text-3xl font-black">Home</a>
-            </li>
-            <li>
-              <a className="text-3xl font-black">About</a>
-            </li>
-            <li>
-              <a className="text-3xl font-black">Services</a>
-            </li>
-            <li>
-              <a className="text-3xl font-black">Portfolio</a>
-            </li>
-            <li>
-              <a className="text-3xl font-black">Latest News</a>
-            </li>
-            <li>
-              <a className="text-3xl font-black">Contact</a>
-            </li>
-          </ul>
-          <div className="flex flex-row justify-end text-right items-start px-10">
+        <div className="menu w-full min-h-full bg-white flex flex-row justify-between">
+          <div className="pr-12 w-[100vw] flex flex-row justify-end text-right items-start px-10">
             <label htmlFor="my-drawer" aria-label="close sidebar">
               <svg
                 fill="black"
-                width="63px"
-                height="63px"
+                width="40px"
+                height="40px"
                 viewBox="0 0 12 12"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -81,6 +61,37 @@ const Drawer = () => {
                 </g>
               </svg>
             </label>
+          </div>
+          <div className="w-full">
+            <div className="w-full">
+              <ul className="w-full min-h-full flex flex-col gap-4 text-xl pl-[33%] font-bold text-center align-middle items-start text-base-content z-50">
+                <li className="hover: underline-offset-8 hover: underline">
+                  <label htmlFor="my-drawer" aria-label="close sidebar">
+                    <a href="/">Home</a>
+                  </label>
+                </li>
+                <li>
+                  <label htmlFor="my-drawer" aria-label="close sidebar">
+                    <a href="#about">About</a>
+                  </label>
+                </li>
+                <li>
+                  <label htmlFor="my-drawer" aria-label="close sidebar">
+                    <a href="#services">Services</a>
+                  </label>
+                </li>
+                <li>
+                  <label htmlFor="my-drawer" aria-label="close sidebar">
+                    <a href="/latest-news">Latest News</a>
+                  </label>
+                </li>
+                <li>
+                  <label htmlFor="my-drawer" aria-label="close sidebar">
+                    <a href="#contact">Contact</a>
+                  </label>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
